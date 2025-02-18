@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UNICEF\\Desktop\\лаби\\lab_oop\\oop-lab5\\SimpleClassConlsole\\SimpleClassConlsole\\SimpleClassConlsole.csproj",
+      "projectUniqueName": "C:\\Users\\UNICEF\\Desktop\\лаби\\refactoring-my-old-lab\\oop-lab5\\SimpleClassConlsole\\SimpleClassConlsole\\SimpleClassConlsole.csproj",
       "projectName": "SimpleClassConlsole",
-      "projectPath": "C:\\Users\\UNICEF\\Desktop\\лаби\\lab_oop\\oop-lab5\\SimpleClassConlsole\\SimpleClassConlsole\\SimpleClassConlsole.csproj",
+      "projectPath": "C:\\Users\\UNICEF\\Desktop\\лаби\\refactoring-my-old-lab\\oop-lab5\\SimpleClassConlsole\\SimpleClassConlsole\\SimpleClassConlsole.csproj",
       "packagesPath": "C:\\Users\\UNICEF\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UNICEF\\Desktop\\лаби\\lab_oop\\oop-lab5\\SimpleClassConlsole\\SimpleClassConlsole\\obj\\",
+      "outputPath": "C:\\Users\\UNICEF\\Desktop\\лаби\\refactoring-my-old-lab\\oop-lab5\\SimpleClassConlsole\\SimpleClassConlsole\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\UNICEF\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\UNICEF\\Desktop\\лаби\\lab_oop\\oop-lab5\\SimpleClassConlsole\\SimpleClassLibrary\\SimpleClassLibrary.csproj": {
-              "projectPath": "C:\\Users\\UNICEF\\Desktop\\лаби\\lab_oop\\oop-lab5\\SimpleClassConlsole\\SimpleClassLibrary\\SimpleClassLibrary.csproj"
+            "C:\\Users\\UNICEF\\Desktop\\лаби\\refactoring-my-old-lab\\oop-lab5\\SimpleClassConlsole\\SimpleClassLibrary\\SimpleClassLibrary.csproj": {
+              "projectPath": "C:\\Users\\UNICEF\\Desktop\\лаби\\refactoring-my-old-lab\\oop-lab5\\SimpleClassConlsole\\SimpleClassLibrary\\SimpleClassLibrary.csproj"
             }
           }
         }
