@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using SimpleClassLibrary;
+using System.Linq;
 
 class Program
 {
@@ -13,45 +14,25 @@ class Program
         while (!exit)
         {
             Console.Clear();
-            Console.WriteLine("1. Вивести інформацію про працівника");
-            Console.WriteLine("2. Вивести інформацію про всіх працівників");
-            Console.WriteLine("3. Отримати інформацію про найбільшу та найменшу зарплату");
-            Console.WriteLine("4. Сортувати працівників за спаданням зарплати");
-            Console.WriteLine("5. Сортувати працівників за зростанням стажу роботи");
-            Console.WriteLine("6. Вийти");
-
+            DisplayMenu(); 
             string choice = Console.ReadLine();
 
             switch (choice)
             {
                 case "1":
-                    Console.Write("Введіть індекс працівника: ");
-                    if (int.TryParse(Console.ReadLine(), out int index) && index >= 0 && index < workers.Length)
-                    {
-                        PrintWorker(workers[index]);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Некоректний індекс.");
-                    }
+                    PrintWorkerByIndex(workers);
                     break;
                 case "2":
                     PrintWorkers(workers);
                     break;
                 case "3":
-                    GetWorkersInfo(workers, out Worker minSalaryWorker, out Worker maxSalaryWorker);
-                    Console.WriteLine("Працівник з найменшою зарплатою:");
-                    PrintWorker(minSalaryWorker);
-                    Console.WriteLine("Працівник з найбільшою зарплатою:");
-                    PrintWorker(maxSalaryWorker);
+                    PrintMinMaxSalaryWorkers(workers);
                     break;
                 case "4":
-                    SortWorkerBySalary(workers);
-                    PrintWorkers(workers);
+                    SortAndPrintWorkers(workers, SortWorkerBySalary);
                     break;
                 case "5":
-                    SortWorkerByWorkExperience(workers);
-                    PrintWorkers(workers);
+                    SortAndPrintWorkers(workers, SortWorkerByWorkExperience);
                     break;
                 case "6":
                     exit = true;
@@ -65,7 +46,45 @@ class Program
         }
     }
 
-    public static Worker[] ReadWorkersArray()
+    static void DisplayMenu()
+    {
+        Console.WriteLine("1. Вивести інформацію про працівника");
+        Console.WriteLine("2. Вивести інформацію про всіх працівників");
+        Console.WriteLine("3. Отримати інформацію про найбільшу та найменшу зарплату");
+        Console.WriteLine("4. Сортувати працівників за спаданням зарплати");
+        Console.WriteLine("5. Сортувати працівників за зростанням стажу роботи");
+        Console.WriteLine("6. Вийти");
+    }
+
+    static void PrintWorkerByIndex(Worker[] workers)
+    {
+        Console.Write("Введіть індекс працівника: ");
+        if (int.TryParse(Console.ReadLine(), out int index) && index >= 0 && index < workers.Length)
+        {
+            PrintWorker(workers[index]);
+        }
+        else
+        {
+            Console.WriteLine("Некоректний індекс.");
+        }
+    }
+
+    static void PrintMinMaxSalaryWorkers(Worker[] workers)
+    {
+        GetWorkersInfo(workers, out Worker minSalaryWorker, out Worker maxSalaryWorker);
+        Console.WriteLine("Працівник з найменшою зарплатою:");
+        PrintWorker(minSalaryWorker);
+        Console.WriteLine("Працівник з найбільшою зарплатою:");
+        PrintWorker(maxSalaryWorker);
+    }
+
+    static void SortAndPrintWorkers(Worker[] workers, Action<Worker[]> sortMethod)
+    {
+        sortMethod(workers); 
+        PrintWorkers(workers);
+    }
+
+    static Worker[] ReadWorkersArray()
     {
         Console.Write("Введіть кількість працівників: ");
         int n = int.Parse(Console.ReadLine());
@@ -73,68 +92,68 @@ class Program
 
         for (int i = 0; i < n; i++)
         {
-            Console.WriteLine($"Введіть дані для працівника {i + 1}:");
-            Console.Write("Прізвище та ініціали: ");
-            string name = Console.ReadLine();
-            Console.Write("Рік початку роботи: ");
-            int year = int.Parse(Console.ReadLine());
-            Console.Write("Місяць початку роботи: ");
-            int month = int.Parse(Console.ReadLine());
-            Console.Write("Назва компанії: ");
-            string companyName = Console.ReadLine();
-            Console.Write("Посада: ");
-            string position = Console.ReadLine();
-            Console.Write("Зарплата: ");
-            double salary = double.Parse(Console.ReadLine());
-
-            Console.WriteLine("Оберіть одиниці вимірювання для введення розміру премії:");
-            Console.WriteLine("1. Гривні (UAH)");
-            Console.WriteLine("2. Долари (USD)");
-            Console.WriteLine("3. Євро (EUR)");
-
-            double bonus = 0;
-            switch (Console.ReadLine())
-            {
-                case "1":
-                    Console.Write("Введіть розмір премії в гривнях: ");
-                    bonus = double.Parse(Console.ReadLine());
-                    break;
-                case "2":
-                    Console.Write("Введіть розмір премії в доларах: ");
-                    bonus = double.Parse(Console.ReadLine()) * 27.0; // example exchange rate
-                    break;
-                case "3":
-                    Console.Write("Введіть розмір премії в євро: ");
-                    bonus = double.Parse(Console.ReadLine()) * 30.0; // example exchange rate
-                    break;
-                default:
-                    Console.WriteLine("Некоректний вибір.");
-                    break;
-            }
-
-            Company company = new Company(companyName, position, salary);
-            workers[i] = new Worker(name, year, month, company, bonus);
+            workers[i] = ReadWorkerData(i + 1);
         }
 
         return workers;
     }
 
-    public static void PrintWorker(Worker worker)
+    static Worker ReadWorkerData(int index)
+    {
+        Console.WriteLine($"Введіть дані для працівника {index}:");
+        Console.Write("Прізвище та ініціали: ");
+        string name = Console.ReadLine();
+        Console.Write("Рік початку роботи: ");
+        int year = int.Parse(Console.ReadLine());
+        Console.Write("Місяць початку роботи: ");
+        int month = int.Parse(Console.ReadLine());
+        Console.Write("Назва компанії: ");
+        string companyName = Console.ReadLine();
+        Console.Write("Посада: ");
+        string position = Console.ReadLine();
+        Console.Write("Зарплата: ");
+        double salary = double.Parse(Console.ReadLine());
+
+        double bonus = ReadBonus();
+
+        Company company = new Company(companyName, position, salary);
+        return new Worker(name, year, month, company, bonus);
+    }
+
+    static double ReadBonus()
+    {
+        Console.WriteLine("Оберіть одиниці вимірювання для введення розміру премії:");
+        Console.WriteLine("1. Гривні (UAH)");
+        Console.WriteLine("2. Долари (USD)");
+        Console.WriteLine("3. Євро (EUR)");
+
+        return Console.ReadLine() switch
+        {
+            "1" => ReadBonusAmount("гривнях"),
+            "2" => ReadBonusAmount("доларах") * 27.0,
+            "3" => ReadBonusAmount("євро") * 30.0,
+            _ => 0 
+        };
+    }
+
+    static double ReadBonusAmount(string currency)
+    {
+        Console.Write($"Введіть розмір премії в {currency}: ");
+        return double.Parse(Console.ReadLine());
+    }
+
+    static void PrintWorker(Worker worker)
     {
         Console.WriteLine($"Ім'я: {worker.GetName()}");
-        Console.WriteLine($"Рік початку роботи: {worker.GetYear()}");
-        Console.WriteLine($"Місяць початку роботи: {worker.GetMonth()}");
         Console.WriteLine($"Компанія: {worker.GetWorkPlace().GetName()}");
         Console.WriteLine($"Посада: {worker.GetWorkPlace().GetPosition()}");
         Console.WriteLine($"Зарплата: {worker.GetWorkPlace().GetSalary()}");
         Console.WriteLine($"Стаж роботи: {worker.GetWorkExperience()} місяців");
         Console.WriteLine($"Заробіток за весь час: {worker.GetTotalMoney()}");
         Console.WriteLine($"Премія в UAH: {worker.GetBonusInUAH()}");
-        Console.WriteLine($"Премія в USD: {worker.GetBonusInUSD(27.0)}"); // example exchange rate
-        Console.WriteLine($"Премія в EUR: {worker.GetBonusInEUR(30.0)}"); // example exchange rate
     }
 
-    public static void PrintWorkers(Worker[] workers)
+    static void PrintWorkers(Worker[] workers)
     {
         foreach (var worker in workers)
         {
@@ -143,18 +162,18 @@ class Program
         }
     }
 
-    public static void GetWorkersInfo(Worker[] workers, out Worker minSalaryWorker, out Worker maxSalaryWorker)
+    static void GetWorkersInfo(Worker[] workers, out Worker minSalaryWorker, out Worker maxSalaryWorker)
     {
         minSalaryWorker = workers.OrderBy(w => w.GetWorkPlace().GetSalary()).First();
         maxSalaryWorker = workers.OrderByDescending(w => w.GetWorkPlace().GetSalary()).First();
     }
 
-    public static void SortWorkerBySalary(Worker[] workers)
+    static void SortWorkerBySalary(Worker[] workers)
     {
         Array.Sort(workers, (w1, w2) => w2.GetWorkPlace().GetSalary().CompareTo(w1.GetWorkPlace().GetSalary()));
     }
 
-    public static void SortWorkerByWorkExperience(Worker[] workers)
+    static void SortWorkerByWorkExperience(Worker[] workers)
     {
         Array.Sort(workers, (w1, w2) => w1.GetWorkExperience().CompareTo(w2.GetWorkExperience()));
     }
