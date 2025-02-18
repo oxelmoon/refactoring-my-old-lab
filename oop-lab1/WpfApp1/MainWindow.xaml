@@ -1,0 +1,36 @@
+﻿<Window x:Class="WPFApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Лабораторна робота №1. Завдання 1" Height="300" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="LightYellow">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Значення x:" FontFamily="Arial" FontSize="14" Margin="10" />
+        <TextBox x:Name="textBoxX" Grid.Row="0" Grid.Column="1" FontFamily="Arial" FontSize="14" Margin="10" />
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Значення y:" FontFamily="Arial" FontSize="14" Margin="10" />
+        <TextBox x:Name="textBoxY" Grid.Row="1" Grid.Column="1" FontFamily="Arial" FontSize="14" Margin="10" />
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Значення z:" FontFamily="Arial" FontSize="14" Margin="10" />
+        <TextBox x:Name="textBoxZ" Grid.Row="2" Grid.Column="1" FontFamily="Arial" FontSize="14" Margin="10" />
+
+        <Button Grid.Row="3" Grid.Column="1" Content="Обчислити" FontFamily="Arial" FontSize="14" Margin="10" Background="LightBlue" Click="Button_Click" />
+
+        <Label Grid.Row="4" Grid.Column="0" Content="Результат:" FontFamily="Arial" FontSize="14" Margin="10" />
+        <TextBox x:Name="textBoxResult" Grid.Row="4" Grid.Column="1" FontFamily="Arial" FontSize="14" Margin="10" IsReadOnly="True" />
+
+        <TextBlock Grid.Row="5" Grid.Column="1" Text="Савін Є.І ІПЗ-23-3" FontFamily="Arial" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" />
+    </Grid>
+</Window>
