@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CscdWJ49Dd1vbrYDxijcCn8xJsTuRYc7RHm62O+lIhUGAiTLBgH1kec5ZGknlEuw74lhLMFFVxEKCPZ+j6MgUQ==",
+  "dgSpecHash": "cbMB6l4PmwnzFNtKybQ0Y9X1EdU1f7Ok7A8Nkvcv7o5JN75DwcZFBEI+/Ytju6lF0WjMpTrvFSzi+nRuF+GLdg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\UNICEF\\Desktop\\лаби\\lab_oop\\oop-lab5\\SimpleClassConlsole\\SimpleClassLibrary\\SimpleClassLibrary.csproj",
+  "projectFilePath": "C:\\Users\\UNICEF\\Desktop\\лаби\\refactoring-my-old-lab\\oop-lab5\\SimpleClassConlsole\\SimpleClassLibrary\\SimpleClassLibrary.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
