@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\lab oop\\oop-lab5\\SimpleClassConlsole\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE2C132C-5CC5-42DD-ABF3-4816BC0F9E68}|SimpleClassConlsole\\SimpleClassConlsole.csproj|f:\\lab oop\\oop-lab5\\simpleclassconlsole\\simpleclassconlsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE2C132C-5CC5-42DD-ABF3-4816BC0F9E68}|SimpleClassConlsole\\SimpleClassConlsole.csproj|solutionrelative:simpleclassconlsole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{756D5DF9-4325-4247-8F35-AB2730C7C439}|SimpleClassLibrary\\SimpleClassLibrary.csproj|f:\\lab oop\\oop-lab5\\simpleclassconlsole\\simpleclasslibrary\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{756D5DF9-4325-4247-8F35-AB2730C7C439}|SimpleClassLibrary\\SimpleClassLibrary.csproj|solutionrelative:simpleclasslibrary\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{756D5DF9-4325-4247-8F35-AB2730C7C439}|SimpleClassLibrary\\SimpleClassLibrary.csproj|f:\\lab oop\\oop-lab5\\simpleclassconlsole\\simpleclasslibrary\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{756D5DF9-4325-4247-8F35-AB2730C7C439}|SimpleClassLibrary\\SimpleClassLibrary.csproj|solutionrelative:simpleclasslibrary\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\lab oop\\oop-lab5\\SimpleClassConlsole\\SimpleClassConlsole\\Program.cs",
+              "RelativeDocumentMoniker": "SimpleClassConlsole\\Program.cs",
+              "ToolTip": "F:\\lab oop\\oop-lab5\\SimpleClassConlsole\\SimpleClassConlsole\\Program.cs",
+              "RelativeToolTip": "SimpleClassConlsole\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T08:20:44.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Company.cs",
+              "DocumentMoniker": "F:\\lab oop\\oop-lab5\\SimpleClassConlsole\\SimpleClassLibrary\\Company.cs",
+              "RelativeDocumentMoniker": "SimpleClassLibrary\\Company.cs",
+              "ToolTip": "F:\\lab oop\\oop-lab5\\SimpleClassConlsole\\SimpleClassLibrary\\Company.cs",
+              "RelativeToolTip": "SimpleClassLibrary\\Company.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T08:20:29.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Worker.cs",
+              "DocumentMoniker": "F:\\lab oop\\oop-lab5\\SimpleClassConlsole\\SimpleClassLibrary\\Worker.cs",
+              "RelativeDocumentMoniker": "SimpleClassLibrary\\Worker.cs",
+              "ToolTip": "F:\\lab oop\\oop-lab5\\SimpleClassConlsole\\SimpleClassLibrary\\Worker.cs",
+              "RelativeToolTip": "SimpleClassLibrary\\Worker.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T08:14:58.577Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
