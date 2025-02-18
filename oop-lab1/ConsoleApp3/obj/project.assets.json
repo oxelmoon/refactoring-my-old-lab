@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UNICEF\\Desktop\\лаби\\lab oop\\oop-lab1\\ConsoleApp3\\ConsoleApp3.csproj",
+      "projectUniqueName": "C:\\Users\\UNICEF\\Desktop\\лаби\\refactoring-my-old-lab\\oop-lab1\\ConsoleApp3\\ConsoleApp3.csproj",
       "projectName": "ConsoleApp3",
-      "projectPath": "C:\\Users\\UNICEF\\Desktop\\лаби\\lab oop\\oop-lab1\\ConsoleApp3\\ConsoleApp3.csproj",
+      "projectPath": "C:\\Users\\UNICEF\\Desktop\\лаби\\refactoring-my-old-lab\\oop-lab1\\ConsoleApp3\\ConsoleApp3.csproj",
       "packagesPath": "C:\\Users\\UNICEF\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UNICEF\\Desktop\\лаби\\lab oop\\oop-lab1\\ConsoleApp3\\obj\\",
+      "outputPath": "C:\\Users\\UNICEF\\Desktop\\лаби\\refactoring-my-old-lab\\oop-lab1\\ConsoleApp3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\UNICEF\\AppData\\Roaming\\NuGet\\NuGet.Config",
